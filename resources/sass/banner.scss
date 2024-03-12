@@ -1,0 +1,32 @@
+.banner {
+  height: 500px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/banner-bg.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    font-family: "Roboto Slab", serif;
+    color: $color-text-base;
+    font-size: $title;
+    margin-bottom: $gap;
+  }
+
+  &__button {
+    background: $color-text-base;
+    color: $color-black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  @media #{$media-screen-mobile} {
+    &__title {
+      font-size: $title-mobile;
+    }
+  }
+}
