@@ -1,6 +1,42 @@
-body {
+html body {
   font-size: $text-base;
   font-family: "Roboto Slab", serif;
   position: relative;
   height: 100%;
+  background: $color-black;
+  color: $color-text-base;
+  font-weight: 300;
+
+  @media #{$media-screen-mobile} {
+    font-size: $text-base-mobile;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.title {
+  font-size: $title;
+  font-weight: 500;
+  letter-spacing: 5px;
+
+  @media #{$media-not-desktop} {
+    font-size: $title-tablet;
+  }
+
+  @media #{$media-screen-mobile} {
+    font-size: $title-mobile;
+  }
+}
+
+.button {
+  background: $color-text-base;
+  color: $color-black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
 }

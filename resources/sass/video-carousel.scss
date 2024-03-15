@@ -1,0 +1,48 @@
+.video-carousel {
+  position: relative;
+  padding: 50px 0;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__video {
+    font-size: 0;
+    margin-bottom: 10px;
+
+    iframe {
+      width: 100%;
+      height: 360px;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-prev {
+    left: 50px;
+  }
+
+  .swiper-button-next {
+    right: 50px;
+  }
+
+  @media #{$media-screen-mobile} {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
