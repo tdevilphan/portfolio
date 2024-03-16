@@ -34,6 +34,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+  }
+
+  &__video:hover {
+    .overlay {
+      opacity: 1;
+    }
   }
 
   &__video-title {

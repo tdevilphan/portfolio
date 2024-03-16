@@ -14,7 +14,7 @@
           </video>
           <div class="overlay">
             <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="#" class="button">Contact</a>
+            <a href="/project" class="button">Let's see</a>
           </div>
         </div>
         <div class="line-of-work__video">
@@ -23,7 +23,7 @@
           </video>
           <div class="overlay">
             <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="#" class="button">Contact</a>
+            <a href="/project" class="button">Let's see</a>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
           </video>
           <div class="overlay">
             <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="#" class="button">Contact</a>
+            <a href="/project" class="button">Let's see</a>
           </div>
         </div>
         <div class="line-of-work__video">
@@ -43,7 +43,7 @@
           </video>
           <div class="overlay">
             <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="#" class="button">Contact</a>
+            <a href="/project" class="button">Let's see</a>
           </div>
         </div>
       </div>
