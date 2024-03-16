@@ -1,5 +1,5 @@
 <div class="video-carousel js-video-carousel">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
     <div class="swiper video-carousel__carousel">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
