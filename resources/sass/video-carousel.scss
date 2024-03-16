@@ -2,6 +2,11 @@
   position: relative;
   padding: 50px 0;
 
+  .container {
+    padding: 0 80px;
+    position: relative;
+  }
+
   &__title {
     font-size: 20px;
     font-weight: 400;
@@ -31,18 +36,17 @@
   }
 
   .swiper-button-prev {
-    left: 50px;
+    left: 10px;
   }
 
   .swiper-button-next {
-    right: 50px;
+    right: 10px;
   }
 
-  @media #{$media-screen-mobile} {
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: none;
-    }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $color-border;
+    font-size: 36px;
   }
 }
 
