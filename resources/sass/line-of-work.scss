@@ -1,0 +1,99 @@
+.line-of-work {
+  padding: 50px 0;
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://b1681952.smushcdn.com/1681952/wp-content/uploads/2020/12/image-types.jpg?lossy=0&strip=1&webp=1") no-repeat center;
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+  }
+
+  &__banner-content {
+    max-width: 810px;
+  }
+  video {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+  }
+
+  &__video {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .overlay {
+      background-color: rgba(0, 0, 0, .5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    opacity: 1;
+      a {
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+      }
+  }
+
+  &__video:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  &__video-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+  }
+
+  .col-right {
+    padding-top: 235px;
+  }
+
+  .col-left {
+    padding-top: 50px;
+  }
+
+  @media #{$media-not-desktop} {
+    .col-right {
+      padding-top: 170px;
+    }
+
+    &__video-title {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media #{$media-screen-mobile} {
+    .col-right {
+      padding-top: 0;
+    }
+
+    &__video-title {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 400;
+      padding-bottom: 20px;
+    }
+  }
+}

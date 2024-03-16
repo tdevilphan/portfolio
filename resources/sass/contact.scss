@@ -1,0 +1,90 @@
+.contact {
+  padding: 50px 0;
+  background: $color-black-light;
+
+  &__title {
+    padding-bottom: 16px;
+  }
+
+  &__info-wrap {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__info {
+    margin-bottom: 5px;
+    display: flex;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover {
+      color: inherit;
+      opacity: 0.8;
+    }
+  }
+
+  &__info-title {
+    width: 80px;
+  }
+
+  &__form-container {
+    border-radius: 8px;
+    padding: 20px;
+
+    .form-group:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+  }
+
+  &__button {
+    border: unset;
+    background: $color-black;
+    color: $color-text-base;
+  }
+
+  &__button:hover {
+    opacity: 0.8;
+  }
+
+  &__image {
+    .img {
+      width: 100%;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center;
+      display: block;
+    }
+
+    .img-mobile {
+      display: none;
+    }
+  }
+
+  @media #{$media-screen-mobile} {
+    &__content {
+      order: 2;
+    }
+
+    &__image {
+      .img {
+        display: none;
+      }
+
+      .img-mobile {
+        border-radius: 8px;
+        padding-bottom: 30px;
+        display: block;
+      }
+    }
+  }
+}

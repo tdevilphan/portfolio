@@ -1,3 +1,18 @@
-h1 {
-    font-size: 10px;
-}
+@use "sass:math";
+
+@import "responsive";
+@import "colors";
+@import "fonts";
+@import "spacing";
+@import "common";
+
+@import "header";
+@import "banner";
+@import "video-carousel";
+@import "brand";
+@import "line-of-work";
+@import "contact";
+@import "footer";
+@import "banner-youtube";
+@import "album";
+@import "pictures";

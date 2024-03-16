@@ -1,0 +1,16 @@
+$break-point-375: 375px;
+$break-point-576: 576px;
+$break-point-768: 768px;
+$break-point-992: 992px;
+$break-point-1200: 1200px;
+$break-point-1400: 1400px;
+
+$media-screen-mobile-small: '(max-width: #{$break-point-375 - 1})';
+$media-screen-mobile-normal: '(max-width: #{$break-point-576 - 1})';
+$media-screen-mobile: '(max-width: #{$break-point-768 - 1})';
+$media-screen-tablet: '(min-width: #{$break-point-768}) and (max-width: #{$break-point-992 - 1})';
+$media-screen-desktop: '(min-width: #{$break-point-992}) and (max-width: #{$break-point-1200 - 1})';
+$media-not-desktop: '(max-width: #{$break-point-992 - 1})';
+$media-screen-tablet-desktop: '(min-width: #{$break-point-768}) and (max-width: #{$break-point-1200 - 1})';
+$media-small-desktop: '(min-width: #{$break-point-1200})';
+$media-large-desktop: '(min-width: #{$break-point-1400})';
