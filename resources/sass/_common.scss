@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 html body {
   font-size: $text-base;
   font-family: "Roboto Slab", serif;
@@ -6,6 +12,8 @@ html body {
   background: $color-black;
   color: $color-text-base;
   font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media #{$media-screen-mobile} {
     font-size: $text-base-mobile;
