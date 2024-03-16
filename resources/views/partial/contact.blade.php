@@ -1,7 +1,7 @@
 <div class="contact" id="contact">
   <div class="container">
     <div class="row no-gutters block-9">
-      <div class="col-md-6 contact__content">
+      <div class="col-md-6 contact__content" data-aos="fade-right">
         <div class="contact__title title">Let's talk</div>
         <ul class="contact__info-wrap">
           <li class="contact__info">
@@ -34,7 +34,7 @@
           </form>
         </div>
       </div>
-      <div class="col-md-6 d-flex contact__image">
+      <div class="col-md-6 d-flex contact__image" data-aos="fade-left">
         <div class="img" style="background-image: url('https://cdn.vjshop.vn/tin-tuc/cach-hoat-dong-cua-may-anh-phim/may-anh-phim-5.jpg');"></div>
         <div class="img-mobile"><img src="https://cdn.vjshop.vn/tin-tuc/cach-hoat-dong-cua-may-anh-phim/may-anh-phim-5.jpg" alt=""></div>
       </div>

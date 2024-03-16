@@ -1,7 +1,7 @@
 <div class="brand js-brand-carousel" id="clients">
   <div class="container">
-    <div class="brand__title title">Featured Clients</div>
-    <div class="brand__desc">Who we work with</div>
+    <div class="brand__title title" data-aos="fade-right">Featured Clients</div>
+    <div class="brand__desc" data-aos="fade-left">Who we work with</div>
     <div class="swiper mySwiper brand__carousel">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
