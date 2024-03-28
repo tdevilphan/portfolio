@@ -27,14 +27,4 @@ class Project extends Model
     protected $casts = [
         'images' => 'array',
     ];
-
-    public function images()
-    {
-        return $this->hasMany(Image::class);
-    }
-
-    public function categories()
-    {
-        return $this->belongsToMany(Category::class);
-    }
 }

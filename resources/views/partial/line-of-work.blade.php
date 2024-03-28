@@ -7,37 +7,43 @@
   </div>
   <div class="container">
     <div class="line-of-work__videos row">
+        @php
+            $aos_left_values = ['fade-down-right', 'fade-up-right'];
+            $aos_right_values = ['fade-down-left', 'fade-up-left'];
+            $aos_left_index = 0;
+            $aos_right_index = 0;
+        @endphp
       <div class="col-md-6 col-left">
-        <div class="line-of-work__video" data-aos="fade-down-right">
-            <img src="{{URL::asset('/images/category-1.jpg')}}" alt="">
-          <div class="overlay">
-            <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="/project" class="button">Let's see</a>
-          </div>
-        </div>
-        <div class="line-of-work__video" data-aos="fade-up-right">
-            <img src="{{URL::asset('/images/category-2.jpeg')}}" alt="">
-          <div class="overlay">
-            <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="/project" class="button">Let's see</a>
-          </div>
-        </div>
+          @foreach($categories as $category)
+            @if($loop->index % 2 == 0)
+                  <div class="line-of-work__video" data-aos={{$aos_left_values[$aos_left_index % 2]}}>
+                      <img src="{{URL::asset('/storage/'. $category->image)}}" alt="">
+                      <div class="overlay">
+                          <div class="line-of-work__video-title">{{$category->name}}</div>
+                          <a href="/project" class="button">Let's see</a>
+                      </div>
+                  </div>
+              @endif
+              @php
+                  $aos_left_index++
+              @endphp
+          @endforeach
       </div>
       <div class="col-md-6 col-right">
-        <div class="line-of-work__video" data-aos="fade-down-left">
-            <img src="{{URL::asset('/images/category-4.jpg')}}" alt="">
-          <div class="overlay">
-            <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="/project" class="button">Let's see</a>
-          </div>
-        </div>
-        <div class="line-of-work__video" data-aos="fade-up-left">
-            <img src="{{URL::asset('/images/category-3.jpeg')}}" alt="">
-          <div class="overlay">
-            <div class="line-of-work__video-title">Lorem ipsum dolor sit.</div>
-            <a href="/project" class="button">Let's see</a>
-          </div>
-        </div>
+          @foreach($categories as $category)
+              @if($loop->index % 2 == 1)
+                  <div class="line-of-work__video" data-aos={{$aos_right_values[$aos_right_index % 2]}}>
+                      <img src="{{URL::asset('/storage/'. $category->image)}}" alt="">
+                      <div class="overlay">
+                          <div class="line-of-work__video-title">{{$category->name}}</div>
+                          <a href="/project" class="button">Let's see</a>
+                      </div>
+                  </div>
+              @endif
+              @php
+                  $aos_right_index++
+              @endphp
+          @endforeach
       </div>
     </div>
   </div>

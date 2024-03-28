@@ -30,6 +30,7 @@ class CategoryResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('slug')
+                    ->unique()
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Toggle::make('active')
@@ -73,7 +74,7 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ProjectsRelationManager::class,
+            //
         ];
     }
 

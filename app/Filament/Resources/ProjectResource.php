@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -29,18 +30,21 @@ class ProjectResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255),
-                Forms\Components\Select::make('category')
-                    ->relationship('category', 'name'),
+                Forms\Components\Select::make('category_id')
+                    ->label('Category')
+                    ->options(Category::all()->pluck('name', 'id'))
+                    ->searchable()
+                    ->required(),
                 Forms\Components\TextInput::make('video')
                     ->maxLength(255),
-                FileUpload::make('image')
+                FileUpload::make('images')
                     ->disk('local')
                     ->preserveFilenames()
                     ->multiple()
                     ->directory('images')
                     ->visibility('public')
                     ->storeFileNamesIn('images')
-                    ->acceptedFileTypes(['image/jpeg, image/jpg, image/png'])
+                    ->image()
             ]);
     }
 

@@ -23,7 +23,7 @@ class Category extends Model
         'active'
     ];
 
-    public function products()
+    public function project()
     {
         return $this->belongsToMany(Product::class);
     }
