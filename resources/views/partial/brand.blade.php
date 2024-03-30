@@ -4,47 +4,13 @@
     <div class="brand__desc" data-aos="fade-left">Who we work with</div>
     <div class="swiper mySwiper brand__carousel">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Adidas-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Amazon-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Baskin-Robbins-500x281.png"
-                 alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Coca-Cola-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Hyundai-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-LG-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Pinterest-500x281.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="brand__logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/08/famous-brand-logo-Evernote-500x281.png" alt="">
-          </div>
-        </div>
+          @foreach($testimonials as $testimonial)
+              <div class="swiper-slide">
+                  <div class="brand__logo">
+                      <img src="{{URL::asset('/storage/'. $testimonial->image)}}" alt="">
+                  </div>
+              </div>
+          @endforeach
       </div>
     </div>
   </div>

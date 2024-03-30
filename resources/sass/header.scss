@@ -11,6 +11,12 @@
     padding-bottom: 5px;
     font-weight: 500;
     letter-spacing: 5px;
+      text-decoration: unset;
+      color: white;
+      &:hover {
+cursor: pointer;
+          color: white;
+      }
   }
 
   &__desc {

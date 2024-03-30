@@ -3,7 +3,7 @@
     <div class="header__navbar">
       <nav class="navbar navbar-expand-lg">
         <div class="header__content">
-          <div class="header__name">TUD MEDIA</div>
+          <a href="/" class="header__name">DX2 Production</a>
           <div class="header__desc">Double your expectation</div>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

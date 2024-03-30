@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsFormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'homepage']);
 
-Route::get('/project', function () {
-  return view('project');
-});
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+Route::get('/category/{slug}', [\App\Http\Controllers\CategoryController::class, 'getCategoryPage']);
+
+Route::get('/not-found', function () {
+  return view('not-found');
+})->name('not-found');
 
 Route::get('/project/detail', function () {
   return view('detail');

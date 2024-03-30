@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'TUD Media')
+@section('title', 'DX2 Production')
 
 @section('style-libraries')
 @stop
