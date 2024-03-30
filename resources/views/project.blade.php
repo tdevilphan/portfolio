@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'TUD Media')
+@section('title', 'DX2 Production')
 
 @section('style-libraries')
 
@@ -17,8 +17,33 @@
 @stop
 
 @section('content')
-@include('partial.banner-youtube')
-@include('partial.album')
+    @if(isset($projectWithVideo))
+        <div class="banner-youtube">
+            <div class="container">
+                <div class="banner-youtube__video">
+                    <iframe src={{$projectWithVideo->video}}></iframe>
+                </div>
+            </div>
+        </div>
+@endif
+    @if(isset($projectsWithoutVideo))
+    @if($projectsWithoutVideo->count() > 0)
+        <div class="album">
+            <div class="container">
+                <div class="row album__list">
+                    @foreach($projectsWithoutVideo as $project)
+                        <div class="col-md-4 album__card">
+                            <img src="{{URL::asset('/storage/'. array_values($project->images)[0])}}" alt="">
+                            <div class="overlay">
+                                <a href="/project/detail" class="button">See more</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+    @endif
 @stop
 
 @section('scripts')

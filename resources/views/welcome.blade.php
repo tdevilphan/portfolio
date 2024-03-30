@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'TUD Media')
+@section('title', 'DX2 Production')
 
 @section('style-libraries')
 @stop
@@ -10,7 +10,7 @@
 {{--custom css item suggest search--}}
 <style>
   @font-face {
-    font-family: "Roboto Slab", serif;
+      font-family: 'Helvetica Neue', sans-serif;
   }
 </style>
 @stop

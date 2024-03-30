@@ -18,15 +18,31 @@
           </li>
         </ul>
         <div class="contact__form">
-          <form action="#" class="bg-light contact__form-container">
+          <form action="{{route('contact.store')}}" method="POST" class="bg-light contact__form-container">
+              @csrf
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" placeholder="Your Name" name="name">
+                @if ($errors->has('name'))
+                    <div class="error">
+                        {{ $errors->first('name') }}
+                    </div>
+                @endif
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+              <input type="text" class="form-control" placeholder="Your Email" name="email">
+                @if ($errors->has('email'))
+                    <div class="error">
+                        {{ $errors->first('email') }}
+                    </div>
+                @endif
             </div>
             <div class="form-group">
-              <textarea cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+              <textarea cols="30" rows="4" class="form-control" placeholder="Message" name="message"></textarea>
+                @if ($errors->has('message'))
+                    <div class="error">
+                        {{ $errors->first('message') }}
+                    </div>
+                @endif
             </div>
             <div class="form-group">
               <input type="submit" value="Submit" class="button contact__button">

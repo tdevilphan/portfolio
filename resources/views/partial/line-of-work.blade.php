@@ -20,7 +20,7 @@
                       <img src="{{URL::asset('/storage/'. $category->image)}}" alt="">
                       <div class="overlay">
                           <div class="line-of-work__video-title">{{$category->name}}</div>
-                          <a href="/project" class="button">Let's see</a>
+                          <a href={{"/category/" . $category->slug}} class="button">Let's see</a>
                       </div>
                   </div>
               @endif
@@ -36,7 +36,7 @@
                       <img src="{{URL::asset('/storage/'. $category->image)}}" alt="">
                       <div class="overlay">
                           <div class="line-of-work__video-title">{{$category->name}}</div>
-                          <a href="/project" class="button">Let's see</a>
+                          <a href={{"/category/" . $category->slug}} class="button">Let's see</a>
                       </div>
                   </div>
               @endif

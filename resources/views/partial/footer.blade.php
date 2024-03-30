@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer__container">
       <div class="footer__content">
-        <div class="footer__name">TUD MEDIA</div>
+        <div class="footer__name">DX2 Production</div>
         <div class="footer__desc">Double your expectation</div>
       </div>
       <div class="footer__navbar">

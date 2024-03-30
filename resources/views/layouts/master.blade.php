@@ -9,7 +9,7 @@
 
     <link href="{{ URL::asset('images/favicon.svg') }}" rel="shortcut icon" type="image/png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
 
     {{--Styles css common--}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
