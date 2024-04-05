@@ -20,7 +20,8 @@ class Category extends Model
         'name',
         'image',
         'slug',
-        'active'
+        'active',
+        'category_type'
     ];
 
     public function project()

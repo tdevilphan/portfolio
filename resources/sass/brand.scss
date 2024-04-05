@@ -18,7 +18,22 @@
     margin: auto;
   }
 
+    .swiper-button-prev {
+        left: 0;
+    }
 
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $color-border;
+        font-size: 36px;
+        &::after {
+            font-size: 36px;
+        }
+    }
 
   @media #{$media-not-desktop} {
     &__logo {

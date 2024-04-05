@@ -17,38 +17,57 @@
 @stop
 
 @section('content')
-    @if(isset($projectWithVideo))
-        <div class="banner-youtube">
+    @if(isset($category))
+        @if($category->category_type == 1)
             <div class="container">
-                <div class="banner-youtube__video">
-                    <iframe src={{$projectWithVideo->video}}></iframe>
-                </div>
-            </div>
-        </div>
-@endif
-    @if(isset($projectsWithoutVideo))
-    @if($projectsWithoutVideo->count() > 0)
-        <div class="album">
-            <div class="container">
-                <div class="row album__list">
-                    @foreach($projectsWithoutVideo as $project)
-                        <div class="col-md-4 album__card">
-                            <img src="{{URL::asset('/storage/'. array_values($project->images)[0])}}" alt="">
-                            <div class="overlay">
-                                <a href="/project/detail" class="button">See more</a>
+                <div class="row">
+                    @foreach($projects as $project)
+                        <div class="col-6">
+                            <div class="banner-youtube">
+                                <div class="">
+                                    <p>{{$project->name}}</p>
+                                    <div class="banner-youtube__video">
+                                        <iframe src={{$project->video}}></iframe>
+                                    </div>
+                                    <div class="album__card">
+                                        @foreach($project->images as $image)
+                                            <div class="album__card-image">
+                                                <img src="{{URL::asset('/storage/'. $image)}}" alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
-        </div>
-    @endif
+        @else
+            <div class="container">
+                @foreach($projects as $project)
+                    <div class="album__card">
+                        @foreach($project->images as $image)
+                            <div class="album__card-image">
+                                <img src="{{URL::asset('/storage/'. $image)}}" alt="">
+                            </div>
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
+        @endif
     @endif
 @stop
 
 @section('scripts')
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
-
+    $('.album__card').masonry({
+        // options
+        itemSelector: '.album__card-image',
+        columnWidth: '.album__card-image',
+        percentPosition: true,
+        gutter: 16
+    });
   $(function () {
 
     //anchor link
