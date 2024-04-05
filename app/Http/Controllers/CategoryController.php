@@ -16,8 +16,6 @@ class CategoryController extends BaseController
         if (!$category) return redirect()->route('not-found');
         $projects = Project::where('category_id', $category->id)->get();
         if ($projects->count() <= 0) return redirect()->route('not-found');
-        $projectWithVideo = Project::where('category_id', $category->id)->whereNotNull('video')->first();
-        $projectsWithoutVideo = Project::where('category_id', $category->id)->whereNull('video')->get();
-        return view('project', ['projectWithVideo' => $projectWithVideo, 'projectsWithoutVideo' => $projectsWithoutVideo]);
+        return view('project', ['projects' => $projects, 'category' => $category]);
     }
 }

@@ -3,7 +3,9 @@
 
   iframe {
     width: 100%;
-    height: 550px;
+    height: auto;
+      margin-bottom: 16px;
+      display: block;
   }
 
   @media #{$media-not-desktop} {

@@ -3,7 +3,6 @@
 
   &__card {
     position: relative;
-    margin-bottom: 24px;
   }
 
   .overlay {
@@ -23,4 +22,9 @@
       opacity: 1;
     }
   }
+}
+
+.album__card-image {
+    margin-bottom: 16px;
+    width: calc((100% - 32px) / 3);
 }

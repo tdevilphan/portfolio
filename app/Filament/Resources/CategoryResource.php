@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Forms\Components\Select;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -27,12 +28,19 @@ class CategoryResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
+                    ->multiple()
+                    ->storeFileNamesIn('images')
+                    ->required()
+                    ->image()->enableOpen(),
                 Forms\Components\TextInput::make('slug')
                     ->unique()
                     ->required()
                     ->maxLength(255),
+                Select::make('category_type')
+                    ->options([
+                        '1' => 'With video',
+                        '0' => 'Without video',
+                    ])->default('1'),
                 Forms\Components\Toggle::make('active')
                     ->required(),
             ]);
