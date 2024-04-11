@@ -29,11 +29,13 @@ class CategoryResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->multiple()
-                    ->storeFileNamesIn('images')
+                    ->storeFileNamesIn('image')
                     ->required()
-                    ->image()->enableOpen(),
+                    ->maxFiles(10)
+                    ->maxSize('2048')
+                    ->image(),
                 Forms\Components\TextInput::make('slug')
-                    ->unique()
+                    ->unique(ignoreRecord: true)
                     ->required()
                     ->maxLength(255),
                 Select::make('category_type')

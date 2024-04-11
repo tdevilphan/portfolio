@@ -13,6 +13,9 @@
   @font-face {
     font-family: "Roboto Slab", serif;
   }
+  .banner-youtube__video iframe {
+      height: 360px;
+  }
 </style>
 @stop
 
