@@ -28,10 +28,7 @@ class CategoryResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->multiple()
-                    ->storeFileNamesIn('image')
                     ->required()
-                    ->maxFiles(10)
                     ->maxSize('2048')
                     ->image(),
                 Forms\Components\TextInput::make('slug')
