@@ -1,6 +1,6 @@
 <div class="brand js-brand-carousel" id="clients">
   <div class="container">
-    <div class="brand__title title" data-aos="fade-right">Featured Clients</div>
+    <div class="brand__title title" data-aos="fade-right">FEATURED CLIENTS</div>
     <div class="brand__desc" data-aos="fade-left">Who we work with</div>
     <div class="swiper mySwiper brand__carousel">
       <div class="swiper-wrapper">
