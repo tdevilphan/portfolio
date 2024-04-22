@@ -24,8 +24,6 @@ class TestimonialResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image')
-                    ->multiple()
-                    ->storeFileNamesIn('images')
                     ->required()
                     ->image()->enableOpen()
             ]);

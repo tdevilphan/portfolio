@@ -6,15 +6,15 @@
         <ul class="contact__info-wrap">
           <li class="contact__info">
             <span class="contact__info-title">Email:</span>
-            <span class="contact__info-info"><a href="mailto:test.portfolio@gmail.com">test.portfolio@gmail.com</a></span>
+            <span class="contact__info-info"><a href="mailto:dx2production247@gmail.com">dx2production247@gmail.com</a></span>
           </li>
           <li class="contact__info">
             <span class="contact__info-title">Phone:</span>
-            <span class="contact__info-info"><a href="tel://1234567920">+ 1235 2355 98</a></span>
+            <span class="contact__info-info"><a href="tel:0777392445">0777392445</a></span>
           </li>
           <li class="contact__info">
             <span class="contact__info-title">Address:</span>
-            <span class="contact__info-info"><a target="_blank" href="https://www.google.com/maps/place/C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0287179,105.7703143,14z/data=!3m1!4b1!4m6!3m5!1s0x3135ab5756f91033:0x576917442d674bfd!8m2!3d21.0362368!4d105.7905825!16s%2Fm%2F03mb_rm?hl=vi-VN&entry=ttu">Cau Giay, Ha Noi</a></span>
+            <span class="contact__info-info">Thanh Xuân, Hà Nội</span>
           </li>
         </ul>
         <div class="contact__form">

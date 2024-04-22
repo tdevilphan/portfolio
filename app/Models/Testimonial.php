@@ -17,6 +17,10 @@ class Testimonial extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'url',
+        'image',
+    ];
+
+    protected $casts = [
+        'image' => 'string'
     ];
 }
