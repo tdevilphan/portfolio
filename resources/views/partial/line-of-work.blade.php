@@ -2,7 +2,6 @@
   <div class="line-of-work__banner">
     <div class="line-of-work__banner-content">
       <div class="line-of-work__banner-title title" data-aos="fade-left">OUR LINE OF WORK</div>
-      <div class="line-of-work__banner-desc" data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam architecto at atque dolores enim ipsum iusto laudantium optio placeat quis quisquam rerum, ullam vitae voluptate! Aliquid ducimus esse voluptate!</div>
     </div>
   </div>
   <div class="container">

@@ -19,6 +19,9 @@ html body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    & > div {
+        overflow-x: hidden;
+    }
 
   @media #{$media-screen-mobile} {
     font-size: $text-base-mobile;

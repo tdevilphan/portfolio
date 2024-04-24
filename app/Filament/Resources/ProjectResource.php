@@ -27,18 +27,15 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\Select::make('category_id')
                     ->label('Category')
                     ->options(Category::all()->pluck('name', 'id'))
                     ->searchable()
                     ->required(),
-                Forms\Components\TextInput::make('video')
-                    ->maxLength(255),
+                Forms\Components\TextInput::make('video'),
                 FileUpload::make('images')
                     ->multiple()
                     ->storeFileNamesIn('images')

@@ -7,7 +7,7 @@
                   <div class="swiper-slide">
                       <div class="video-carousel__video">
                           @if(isset($project->video) && $project->video != '')
-                          <iframe src={{$project->video}}></iframe>
+                              {!!$project->video!!}
                           @else
                               <img src="{{$projects->images[0]}}" alt="">
                           @endif
