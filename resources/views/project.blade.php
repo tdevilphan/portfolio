@@ -30,7 +30,7 @@
                                 <div class="">
                                     <p>{{$project->name}}</p>
                                     <div class="banner-youtube__video">
-                                        {{$project->video}}
+                                        {!!$project->video!!}
                                     </div>
                                     <div class="album__card">
                                         @foreach($project->images as $image)
